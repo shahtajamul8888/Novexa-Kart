@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NovexaKart — Full Prompt (Copy)</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#06b6d4; --muted:#9ca3af; --white:#eef2ff;
+    }
+    html,body{height:100%; margin:0; font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{background:linear-gradient(180deg,#071022 0%, #081126 100%); display:flex; align-items:center; justify-content:center; padding:28px; color:var(--white);}
+    .wrap{width:100%; max-width:980px; background:var(--card); border-radius:12px; box-shadow:0 8px 30px rgba(2,6,23,0.6); padding:18px; overflow:hidden;}
+    .top{display:flex; gap:12px; align-items:center; margin-bottom:14px;}
+    .title{flex:1;}
+    h1{margin:0; font-size:18px;}
+    p.sub{margin:4px 0 0; color:var(--muted); font-size:13px;}
+    button.copyBtn{
+      background:linear-gradient(90deg,var(--accent),#7c3aed);
+      color:#042027; border:0; padding:10px 14px; border-radius:8px; cursor:pointer; font-weight:600;
+      box-shadow:0 6px 20px rgba(6,182,212,0.12);
+    }
+    button.copyBtn:active{transform:translateY(1px)}
+    .status{font-size:13px; color:var(--muted); margin-left:8px;}
+    textarea#promptBox{
+      width:100%; height:640px; resize:vertical; border-radius:8px; padding:16px; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+      font-size:13px; line-height:1.5; background:#021826; color:var(--white); border:1px solid rgba(255,255,255,0.04);
+    }
+    .hint{margin-top:10px; color:var(--muted); font-size:13px;}
+    .controls{display:flex; gap:8px; margin-left:8px;}
+    button.downloadBtn{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04); padding:8px 10px; border-radius:8px; cursor:pointer;}
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <div class="top">
+      <div class="title">
+        <h1>NovexaKart — Full Prompt</h1>
+        <p class="sub">Click the button to copy the entire prompt in one go.</p>
+      </div>
+      <div style="display:flex; align-items:center;">
+        <button id="copyBtn" class="copyBtn" aria-label="Copy full prompt">COPY FULL PROMPT</button>
+        <div class="controls">
+          <button id="downloadBtn" class="downloadBtn" title="Download as .txt">Download .txt</button>
+        </div>
+      </div>
+    </div>
+
+    <textarea id="promptBox" aria-label="Full NovexaKart prompt (editable)">
+FULL PROMPT — NovexaKart E-Commerce Website
+
+Build a complete, responsive, and feature-rich e-commerce website named “NovexaKart” — a stylish online fashion store for men’s and women’s products including shoes, clothes, and accessories.
+
+The goal is to create a secure, modern, and user-friendly shopping experience with smooth animations, fast performance, and a mobile-first responsive design.
+
+---
+
+🧠 Product Overview
+Name: NovexaKart  
+Tagline: “Your Style, Your Store.”  
+Purpose: To sell men’s and women’s fashion items online with category-based browsing, Cashfree payment integration, and an admin dashboard for managing orders and inventory.
+
+---
+
+⚙️ Technology Stack
+
+Frontend:
+- Framework: Next.js (React.js)
+- Styling: Tailwind CSS
+- State Management: Redux Toolkit
+- Animations: Framer Motion / AOS
+- Routing: Next Router
+
+Backend:
+- Runtime: Node.js (Express.js)
+- Authentication: JWT + bcrypt
+- API Type: RESTful APIs
+- File Upload: Multer + Cloudinary
+
+Database:
+- MongoDB (with Mongoose)
+- Optional alternative: PostgreSQL
+
+Payment Gateway:
+- Use Cashfree (instead of Razorpay)
+- Integrate Cashfree Payments API for checkout, UPI, cards, wallets, and net banking
+- Implement webhooks to verify and update order status after payment
+- Use sandbox mode for testing and production mode for deployment
+- Use Cashfree Node.js SDK or direct REST API integration
+
+Hosting:
+- Frontend: Vercel / Netlify
+- Backend: Render / Railway / AWS / Heroku
+- Database: MongoDB Atlas
+- Domain: Custom (Namecheap / GoDaddy)
+
+---
+
+🎨 Design Requirements (UI/UX)
+
+Homepage:
+- Hero banner with “Shop Men / Shop Women” buttons
+- Category grid: Men | Women | Shoes | Accessories
+- Trending & featured products carousel
+
+Product Page:
+- Multiple product images with zoom feature
+- Size, color, and stock status
+- “Add to Cart” and “Buy Now” buttons
+
+Cart Page:
+- Edit quantity and remove products
+- Apply discount coupons
+- Display total price summary
+
+Checkout Page:
+- User address management
+- Secure checkout via Cashfree
+- Order confirmation screen
+
+Admin Dashboard:
+- Add/Edit/Delete products
+- Manage users and orders
+- Track stock and sales
+- View analytics and reports
+
+---
+
+🧩 Core Features
+
+User Features:
+- Register/Login with email or OTP
+- Browse by category and filter (price, color, size)
+- Add to cart, wishlist, and compare items
+- Secure checkout with Cashfree
+- Order tracking and order history
+- Review and rating system
+- Notifications via email or Firebase
+
+Admin Features:
+- Manage products, categories, and inventory
+- Manage users and orders
+- Role-based access (Admin / Staff)
+- Dashboard with charts and analytics
+
+Security Features:
+- JWT authentication
+- HTTPS with SSL encryption
+- Captcha and rate limiting on login/signup
+- Secure payment via Cashfree (PCI DSS compliant)
+- Input validation using Joi or Zod
+
+---
+
+🚀 Advanced (Optional) Features
+- AI-based product recommendations
+- Chatbot (OpenAI / Dialogflow)
+- AR Try-On (for accessories/shoes)
+- Multi-language and multi-currency support
+- Progressive Web App (PWA)
+
+---
+
+🧭 Development Phases
+
+1. Planning: Figma design, color palette, typography
+2. Frontend Setup: Next.js + Tailwind structure
+3. Backend Setup: Node.js + MongoDB APIs
+4. Authentication: JWT + bcrypt
+5. Payment Integration: Cashfree API + webhook
+6. Admin Dashboard: React-based management
+7. Testing: Unit + integration + UI testing
+8. Deployment: Host frontend, backend, and DB
+
+---
+
+🧰 Optional Integrations
+- Firebase → Notifications & analytics
+- Cloudinary → Product image hosting
+- SendGrid / Nodemailer → Email confirmations
+- Google Analytics / Meta Pixel → Marketing tracking
+
+---
+
+📦 Final Output Expectation
+- Fully responsive, production-ready e-commerce website
+- Category-based shopping for men and women
+- Integrated Cashfree payment gateway
+- Admin dashboard for management
+- Deployed with a custom domain
+
+---
+
+Project Name: 🛍️ NovexaKart  
+Goal: Build India’s next-gen e-commerce fashion platform with Cashfree payments and modern design principles.
+    </textarea>
+
+    <p class="hint">Tip: You can edit the text before copying. For mobile browsers, long-press the box and choose Select all → Copy if clipboard permission is blocked.</p>
+  </div>
+
+  <script>
+    const copyBtn = document.getElementById('copyBtn');
+    const promptBox = document.getElementById('promptBox');
+    const downloadBtn = document.getElementById('downloadBtn');
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(promptBox.value);
+        copyBtn.textContent = 'COPIED ✓';
+        setTimeout(()=> copyBtn.textContent = 'COPY FULL PROMPT', 1800);
+      } catch (err) {
+        // fallback: select and prompt user
+        promptBox.select();
+        try {
+          document.execCommand('copy');
+          copyBtn.textContent = 'COPIED ✓';
+          setTimeout(()=> copyBtn.textContent = 'COPY FULL PROMPT', 1800);
+        } catch(e){
+          alert('Copy failed — please select the text manually (Ctrl/Cmd + A, then Ctrl/Cmd + C).');
+        }
+      }
+    });
+
+    downloadBtn.addEventListener('click', () => {
+      const blob = new Blob([promptBox.value], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'NovexaKart-Full-Prompt.txt';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
