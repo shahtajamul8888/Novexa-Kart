@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovexaKart | Your Style, Your Store</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="flex justify-between items-center p-4 bg-white shadow">
+      <h1 class="text-2xl font-bold text-blue-600">NovexaKart</h1>
+      <nav>
+        <ul class="flex gap-6 text-gray-700">
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </nav>
+      <div>
+        <button id="cart-btn" class="btn-primary">🛒 Cart</button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Style That Defines You</h2>
+      <button class="shop-btn">Shop Men</button>
+      <button class="shop-btn">Shop Women</button>
+    </section>
+
+    <!-- Products -->
+    <main id="product-list" class="grid grid-cols-2 md:grid-cols-4 gap-6 p-6"></main>
+
+    <!-- Footer -->
+    <footer class="p-6 bg-black text-white text-center">
+      <p>© 2025 NovexaKart — All Rights Reserved</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
